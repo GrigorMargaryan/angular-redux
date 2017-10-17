@@ -20,6 +20,7 @@ import { CustomRouterStateSerializer } from './shared/utils';
 
 import { AppContainer } from './core/containers/app.container';
 import {CoreModule} from './core/core.module';
+import {SearchModule} from './search/search.module';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {CoreModule} from './core/core.module';
     EffectsModule.forRoot([]),
 
     CoreModule.forRoot(),
+    SearchModule.forRoot(),
   ],
   providers: [
     { provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
